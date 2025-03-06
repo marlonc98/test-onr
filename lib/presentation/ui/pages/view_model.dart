@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
 import 'package:provider/provider.dart';
-import 'package:test_rappi/domain/states/localization_state.dart';
+import 'package:test_onr/domain/states/localization_state.dart';
 
 class ViewModel<T> with ChangeNotifier {
   T widget;

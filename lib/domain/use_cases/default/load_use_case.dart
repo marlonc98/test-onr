@@ -1,7 +1,5 @@
-import 'package:get_it/get_it.dart';
-import 'package:test_rappi/domain/repositories/localization_repository.dart';
-import 'package:test_rappi/domain/states/localization_state.dart';
-import 'package:test_rappi/domain/use_cases/genrer/get_all_genrers_use_case.dart';
+import 'package:test_onr/domain/repositories/localization_repository.dart';
+import 'package:test_onr/domain/states/localization_state.dart';
 
 class LoadUseCase {
   final LocalizationRepository localizationRepository;
@@ -17,11 +15,7 @@ class LoadUseCase {
     localizationState.locale = locale;
   }
 
-  Future<void> _getGenrers() async {
-    GetIt.I.get<GetAllGenrersUseCase>().call(true);
-  }
-
   Future<void> call() async {
-    Future.wait([_getLanguage(), _getGenrers()]);
+    Future.wait([_getLanguage()]);
   }
 }

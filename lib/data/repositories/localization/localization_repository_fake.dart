@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_rappi/domain/repositories/localization_repository.dart';
+import 'package:test_onr/domain/repositories/localization_repository.dart';
 
 class LocalizationRepositoryFake extends LocalizationRepository {
   @override

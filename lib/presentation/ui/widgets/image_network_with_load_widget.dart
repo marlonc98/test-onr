@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:test_rappi/utils/images_constants.dart';
+import 'package:test_onr/utils/images_constants.dart';
 
 class ImageNetworkWithLoadWidget extends StatelessWidget {
   final String imageUrl;

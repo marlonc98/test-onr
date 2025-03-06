@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Rappi Movie (fake)",
+            "name": "Onr Shop (fake)",
             "request": "launch",
             "type": "dart",
             "program": "lib/flavors/main_fake.dart",
@@ -15,7 +15,7 @@
             ],
         },
         {
-            "name": "Rappi Movie (dev)",
+            "name": "Onr Shop (dev)",
             "request": "launch",
             "type": "dart",
             "program": "lib/flavors/main_dev.dart",
@@ -25,7 +25,7 @@
             ],
         },
         {
-            "name": "Rappi Movie (prod)",
+            "name": "Onr Shop (prod)",
             "request": "launch",
             "type": "dart",
             "program": "lib/flavors/main_prod.dart",
@@ -36,7 +36,7 @@
         },
 
         {
-            "name": "Rappi Movie (prod - release mode)",
+            "name": "Onr Shop (prod - release mode)",
             "request": "launch",
             "type": "dart",
             "program": "lib/flavors/main_prod.dart",
@@ -48,7 +48,7 @@
             
         },
         {
-            "name": "test_rappi (release mode)",
+            "name": "test_onr (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

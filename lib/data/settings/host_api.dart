@@ -1,7 +1,7 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:test_rappi/data/repositories/localization/localization_repository_impl.dart';
+import 'package:test_onr/data/repositories/localization/localization_repository_impl.dart';
 
-import 'package:test_rappi/data/settings/rest_api.dart';
+import 'package:test_onr/data/settings/rest_api.dart';
 
 class HostApi extends RestApi {
   //load depending flavors

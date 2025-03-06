@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:test_rappi/domain/states/localization_state.dart';
-import 'package:test_rappi/utils/images_constants.dart';
-import 'package:test_rappi/utils/key_words_constants.dart';
+import 'package:test_onr/domain/states/localization_state.dart';
+import 'package:test_onr/utils/images_constants.dart';
+import 'package:test_onr/utils/key_words_constants.dart';
 import 'package:provider/provider.dart';
 
 class NotFoundWidget extends StatelessWidget {

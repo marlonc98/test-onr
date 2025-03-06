@@ -1,6 +1,6 @@
 {
-    "name": "test_rappi",
-    "short_name": "test_rappi",
+    "name": "test_onr",
+    "short_name": "test_onr",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

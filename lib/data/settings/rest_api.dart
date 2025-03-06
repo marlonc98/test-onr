@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
-import 'package:test_rappi/domain/entities/exception_entity.dart';
+import 'package:test_onr/domain/entities/exception_entity.dart';
 
 class RestApi {
   String hostUrl;

@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "test_rappi" "\0"
+            VALUE "FileDescription", "test_onr" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "test_rappi" "\0"
+            VALUE "InternalName", "test_onr" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "test_rappi.exe" "\0"
-            VALUE "ProductName", "test_rappi" "\0"
+            VALUE "OriginalFilename", "test_onr.exe" "\0"
+            VALUE "ProductName", "test_onr" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

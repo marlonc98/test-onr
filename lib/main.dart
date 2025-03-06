@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
-import 'package:test_rappi/di/dependency_injection.dart';
-import 'package:test_rappi/domain/states/genders_state.dart';
-import 'package:test_rappi/domain/states/localization_state.dart';
-import 'package:test_rappi/presentation/routes/route_generator.dart';
-import 'package:test_rappi/presentation/ui/theme/dark_theme.dart';
+import 'package:test_onr/di/dependency_injection.dart';
+import 'package:test_onr/domain/states/localization_state.dart';
+import 'package:test_onr/presentation/routes/route_generator.dart';
+import 'package:test_onr/presentation/ui/theme/dark_theme.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
 
@@ -15,8 +14,6 @@ FutureOr<void> main() async {
     providers: [
       ChangeNotifierProvider<LocalizationState>(
           create: (_) => GetIt.instance.get<LocalizationState>()),
-      ChangeNotifierProvider<GenrersState>(
-          create: (_) => GetIt.instance.get<GenrersState>()),
     ],
     child: const MyApp(),
   ));
@@ -27,9 +24,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Rappi Movies",
+      title: "Onr Shops",
       debugShowCheckedModeBanner: false,
-      theme: darkTheme,
+      theme: lightTheme,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

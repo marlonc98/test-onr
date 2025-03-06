@@ -1,4 +1,4 @@
-name: test_rappi
+name: test_onr
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -119,22 +119,22 @@ flavorizr:
   flavors:
     dev:
       app:
-        name: "[DEV] Rappi Movie"
+        name: "[DEV] Onr Shop"
       android:
-        applicationId: "com.example.test_rappi.dev"
+        applicationId: "com.example.test_onr.dev"
       ios:
-        bundleId: "com.example.test_rappi.dev"
+        bundleId: "com.example.test_onr.dev"
     fake:
       app:
-        name: "[FAKE] Rappi Movie"
+        name: "[FAKE] Onr Shop"
       android:
-        applicationId: "com.example.test_rappi.fake"
+        applicationId: "com.example.test_onr.fake"
       ios:
-        bundleId: "com.example.test_rappi.fake"
+        bundleId: "com.example.test_onr.fake"
     prod:
       app:
-        name: "Rappi Movie"
+        name: "Onr Shop"
       android:
-        applicationId: "com.example.test_rappi"
+        applicationId: "com.example.test_onr"
       ios:
-        bundleId: "com.example.test_rappi"
+        bundleId: "com.example.test_onr"

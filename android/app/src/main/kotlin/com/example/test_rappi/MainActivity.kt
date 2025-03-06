@@ -1,4 +1,4 @@
-package com.example.test_rappi
+package com.example.test_onr
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:test_rappi/domain/states/localization_state.dart';
+import 'package:test_onr/domain/states/localization_state.dart';
 
 class LocalizationStateImpl extends LocalizationState {
   LocalizationStateImpl() {

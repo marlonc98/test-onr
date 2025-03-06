@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_rappi/utils/images_constants.dart';
+import 'package:test_onr/utils/images_constants.dart';
 
 class NotReadImageWidget extends StatelessWidget {
   final double? height;

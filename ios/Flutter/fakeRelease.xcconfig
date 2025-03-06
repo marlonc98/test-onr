@@ -3,5 +3,5 @@
 
 FLUTTER_TARGET=lib/flavors/main_fake.dart
 ASSET_PREFIX=fake
-BUNDLE_NAME=[FAKE] Rappi Movie
-BUNDLE_DISPLAY_NAME=[FAKE] Rappi Movie
+BUNDLE_NAME=[FAKE] Onr Shop
+BUNDLE_DISPLAY_NAME=[FAKE] Onr Shop
