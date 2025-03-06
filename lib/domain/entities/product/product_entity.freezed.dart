@@ -22,11 +22,12 @@ ProductEntity _$ProductEntityFromJson(Map<String, dynamic> json) {
 mixin _$ProductEntity {
   int get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
-  String get shortDescription => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
   double get price => throw _privateConstructorUsedError;
   String get category => throw _privateConstructorUsedError;
   String get imageUrl => throw _privateConstructorUsedError;
-  double get ranking => throw _privateConstructorUsedError;
+  int get rankingCount => throw _privateConstructorUsedError;
+  double get rating => throw _privateConstructorUsedError;
 
   /// Serializes this ProductEntity to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -47,11 +48,12 @@ abstract class $ProductEntityCopyWith<$Res> {
   $Res call(
       {int id,
       String title,
-      String shortDescription,
+      String description,
       double price,
       String category,
       String imageUrl,
-      double ranking});
+      int rankingCount,
+      double rating});
 }
 
 /// @nodoc
@@ -71,11 +73,12 @@ class _$ProductEntityCopyWithImpl<$Res, $Val extends ProductEntity>
   $Res call({
     Object? id = null,
     Object? title = null,
-    Object? shortDescription = null,
+    Object? description = null,
     Object? price = null,
     Object? category = null,
     Object? imageUrl = null,
-    Object? ranking = null,
+    Object? rankingCount = null,
+    Object? rating = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -86,9 +89,9 @@ class _$ProductEntityCopyWithImpl<$Res, $Val extends ProductEntity>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      shortDescription: null == shortDescription
-          ? _value.shortDescription
-          : shortDescription // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       price: null == price
           ? _value.price
@@ -102,9 +105,13 @@ class _$ProductEntityCopyWithImpl<$Res, $Val extends ProductEntity>
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      ranking: null == ranking
-          ? _value.ranking
-          : ranking // ignore: cast_nullable_to_non_nullable
+      rankingCount: null == rankingCount
+          ? _value.rankingCount
+          : rankingCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      rating: null == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
               as double,
     ) as $Val);
   }
@@ -121,11 +128,12 @@ abstract class _$$ProductEntityImplCopyWith<$Res>
   $Res call(
       {int id,
       String title,
-      String shortDescription,
+      String description,
       double price,
       String category,
       String imageUrl,
-      double ranking});
+      int rankingCount,
+      double rating});
 }
 
 /// @nodoc
@@ -143,11 +151,12 @@ class __$$ProductEntityImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? title = null,
-    Object? shortDescription = null,
+    Object? description = null,
     Object? price = null,
     Object? category = null,
     Object? imageUrl = null,
-    Object? ranking = null,
+    Object? rankingCount = null,
+    Object? rating = null,
   }) {
     return _then(_$ProductEntityImpl(
       id: null == id
@@ -158,9 +167,9 @@ class __$$ProductEntityImplCopyWithImpl<$Res>
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String,
-      shortDescription: null == shortDescription
-          ? _value.shortDescription
-          : shortDescription // ignore: cast_nullable_to_non_nullable
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
               as String,
       price: null == price
           ? _value.price
@@ -174,9 +183,13 @@ class __$$ProductEntityImplCopyWithImpl<$Res>
           ? _value.imageUrl
           : imageUrl // ignore: cast_nullable_to_non_nullable
               as String,
-      ranking: null == ranking
-          ? _value.ranking
-          : ranking // ignore: cast_nullable_to_non_nullable
+      rankingCount: null == rankingCount
+          ? _value.rankingCount
+          : rankingCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      rating: null == rating
+          ? _value.rating
+          : rating // ignore: cast_nullable_to_non_nullable
               as double,
     ));
   }
@@ -188,11 +201,12 @@ class _$ProductEntityImpl implements _ProductEntity {
   const _$ProductEntityImpl(
       {required this.id,
       required this.title,
-      required this.shortDescription,
+      required this.description,
       required this.price,
       required this.category,
       required this.imageUrl,
-      required this.ranking});
+      required this.rankingCount,
+      required this.rating});
 
   factory _$ProductEntityImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductEntityImplFromJson(json);
@@ -202,7 +216,7 @@ class _$ProductEntityImpl implements _ProductEntity {
   @override
   final String title;
   @override
-  final String shortDescription;
+  final String description;
   @override
   final double price;
   @override
@@ -210,11 +224,13 @@ class _$ProductEntityImpl implements _ProductEntity {
   @override
   final String imageUrl;
   @override
-  final double ranking;
+  final int rankingCount;
+  @override
+  final double rating;
 
   @override
   String toString() {
-    return 'ProductEntity(id: $id, title: $title, shortDescription: $shortDescription, price: $price, category: $category, imageUrl: $imageUrl, ranking: $ranking)';
+    return 'ProductEntity(id: $id, title: $title, description: $description, price: $price, category: $category, imageUrl: $imageUrl, rankingCount: $rankingCount, rating: $rating)';
   }
 
   @override
@@ -224,20 +240,22 @@ class _$ProductEntityImpl implements _ProductEntity {
             other is _$ProductEntityImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.shortDescription, shortDescription) ||
-                other.shortDescription == shortDescription) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
             (identical(other.price, price) || other.price == price) &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.imageUrl, imageUrl) ||
                 other.imageUrl == imageUrl) &&
-            (identical(other.ranking, ranking) || other.ranking == ranking));
+            (identical(other.rankingCount, rankingCount) ||
+                other.rankingCount == rankingCount) &&
+            (identical(other.rating, rating) || other.rating == rating));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, shortDescription,
-      price, category, imageUrl, ranking);
+  int get hashCode => Object.hash(runtimeType, id, title, description, price,
+      category, imageUrl, rankingCount, rating);
 
   /// Create a copy of ProductEntity
   /// with the given fields replaced by the non-null parameter values.
@@ -259,11 +277,12 @@ abstract class _ProductEntity implements ProductEntity {
   const factory _ProductEntity(
       {required final int id,
       required final String title,
-      required final String shortDescription,
+      required final String description,
       required final double price,
       required final String category,
       required final String imageUrl,
-      required final double ranking}) = _$ProductEntityImpl;
+      required final int rankingCount,
+      required final double rating}) = _$ProductEntityImpl;
 
   factory _ProductEntity.fromJson(Map<String, dynamic> json) =
       _$ProductEntityImpl.fromJson;
@@ -273,7 +292,7 @@ abstract class _ProductEntity implements ProductEntity {
   @override
   String get title;
   @override
-  String get shortDescription;
+  String get description;
   @override
   double get price;
   @override
@@ -281,7 +300,9 @@ abstract class _ProductEntity implements ProductEntity {
   @override
   String get imageUrl;
   @override
-  double get ranking;
+  int get rankingCount;
+  @override
+  double get rating;
 
   /// Create a copy of ProductEntity
   /// with the given fields replaced by the non-null parameter values.

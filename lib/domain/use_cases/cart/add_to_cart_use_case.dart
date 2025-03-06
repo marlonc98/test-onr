@@ -13,9 +13,10 @@ class AddToCartUseCase {
     required this.cartState,
   });
 
-  Future<Either<ExceptionEntity, void>> call(ProductEntity product) async {
+  Future<Either<ExceptionEntity, void>> call(
+      ProductEntity product, int quantity) async {
     Either<ExceptionEntity, void> response =
-        await cartRepository.addToCart(product);
+        await cartRepository.setInCart(product, quantity);
     if (response.isRight) {
       cartState.addItem(product);
     }

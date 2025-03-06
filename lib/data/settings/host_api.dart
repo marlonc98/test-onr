@@ -12,8 +12,7 @@ class HostApi extends RestApi {
   @override
   Future<Map<String, String>> headers() async {
     return {
-      'Authorization':
-          'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYmQzY2IwYmFlNjY4MzIxYTU5MzMyMjlkNDllNWRjNyIsIm5iZiI6MTczODcyMDQ0Ny41NDgsInN1YiI6IjY3YTJjNGJmZGMyNGVlOTNkMTgxMDc3NCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.GAvN1fTcx9OrdzPuqAfy8t1ruXt4wZPQx7a4MgZDU9Q',
+      'Authorization': 'Bearer ',
       "Content-Type": "application/json; charset=utf-8"
     };
   }

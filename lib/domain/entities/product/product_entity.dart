@@ -7,11 +7,12 @@ class ProductEntity with _$ProductEntity {
   const factory ProductEntity({
     required int id,
     required String title,
-    required String shortDescription,
+    required String description,
     required double price,
     required String category,
     required String imageUrl,
-    required double ranking,
+    required int rankingCount,
+    required double rating,
   }) = _ProductEntity;
 
   factory ProductEntity.fromJson(Map<String, dynamic> json) =>

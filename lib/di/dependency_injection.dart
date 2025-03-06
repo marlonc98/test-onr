@@ -1,7 +1,15 @@
 import 'package:get_it/get_it.dart';
+import 'package:test_onr/data/repositories/auth/auth_repository_fake.dart';
+import 'package:test_onr/data/repositories/cart/cart_repository_impl.dart';
 import 'package:test_onr/data/repositories/localization/localization_repository_dev.dart';
 import 'package:test_onr/data/repositories/localization/localization_repository_fake.dart';
 import 'package:test_onr/data/repositories/localization/localization_repository_impl.dart';
+import 'package:test_onr/data/repositories/product/product_repository_dev.dart';
+import 'package:test_onr/data/repositories/product/product_repository_fake.dart';
+import 'package:test_onr/data/repositories/product/product_repository_impl.dart';
+import 'package:test_onr/data/repositories/user/user_repository_dev.dart';
+import 'package:test_onr/data/repositories/user/user_repository_fake.dart';
+import 'package:test_onr/data/repositories/user/user_repository_impl.dart';
 import 'package:test_onr/data/settings/host_api.dart';
 import 'package:test_onr/data/settings/rest_api.dart';
 import 'package:test_onr/domain/repositories/auth_repository.dart';
@@ -34,15 +42,23 @@ class DependencyInjection {
     GetIt getIt = GetIt.instance;
     Flavor? mode = F.appFlavor;
     //#region ------------- repositories -------------------------//
+    getIt.registerSingleton<AuthRepository>(AuthRepositoryFake());
+    getIt.registerSingleton<CartRepository>(CartRepositoryImpl());
     if (mode == Flavor.fake) {
       getIt.registerSingleton<LocalizationRepository>(
           LocalizationRepositoryFake());
+      getIt.registerSingleton<ProductRepository>(ProductRepositoryFake());
+      getIt.registerSingleton<UserRepository>(UserRepositoryFake());
     } else if (mode == Flavor.dev) {
       getIt.registerSingleton<LocalizationRepository>(
           LocalizationRepositoryDev());
+      getIt.registerSingleton<ProductRepository>(ProductRepositoryDev());
+      getIt.registerSingleton<UserRepository>(UserRepositoryDev());
     } else {
       getIt.registerSingleton<LocalizationRepository>(
           LocalizationRepositoryImpl());
+      getIt.registerSingleton<ProductRepository>(ProductRepositoryImpl());
+      getIt.registerSingleton<UserRepository>(UserRepositoryImpl());
     }
     //#endregion repositories
 

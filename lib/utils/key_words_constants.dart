@@ -8,4 +8,7 @@ class KeyWordsConstants {
 
   static const String errorPaginatorTitle = "errorPaginatorTitle";
   static const String errorPaginatorRetry = "errorPaginatorRetry";
+
+  static const String serverErrorProductNotFound = "serverErrorProductNotFound";
+  static const String serverErrorUserNotFound = "serverErrorUserNotFound";
 }
