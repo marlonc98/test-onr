@@ -6,15 +6,12 @@ import 'package:test_onr/data/settings/rest_api.dart';
 class HostApi extends RestApi {
   //load depending flavors
   HostApi({
-    super.hostUrl = "https://api.themoviedb.org/3/",
+    super.hostUrl = "https://fakestoreapi.com/",
   });
 
   @override
   Future<Map<String, String>> headers() async {
-    return {
-      'Authorization': 'Bearer ',
-      "Content-Type": "application/json; charset=utf-8"
-    };
+    return {"Content-Type": "application/json; charset=utf-8"};
   }
 
   Future<String> _addLanguage(String urlToFix) async {

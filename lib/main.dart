@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
       title: "Onr Shops",
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
+      darkTheme: darkTheme,
       onGenerateRoute: RouteGenerator.generateRoute,
     );
   }

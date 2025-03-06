@@ -19,15 +19,15 @@ class ImageNetworkWithLoadWidget extends StatelessWidget {
     this.height,
     this.file,
     this.width,
-    this.defaultImage,
+    this.defaultImage = "assets/images/not_found.png",
     this.fit = BoxFit.cover,
   });
 
-  _isWeb() {
+  bool _isWeb() {
     return imageUrl.startsWith('http') || imageUrl.startsWith('https');
   }
 
-  _isLocal() {
+  bool _isLocal() {
     return imageUrl.startsWith('assets/') ||
         imageUrl.startsWith('file:') ||
         imageUrl.startsWith('blob:');
@@ -36,7 +36,7 @@ class ImageNetworkWithLoadWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (kIsWeb && _isLocal() && file != null) {
-      //load image from file
+      // Load image from file
       return FutureBuilder<Uint8List>(
         future: file!.readAsBytes(),
         builder: (context, snapshot) {
@@ -48,63 +48,68 @@ class ImageNetworkWithLoadWidget extends StatelessWidget {
               width: width,
               height: height,
               errorBuilder: (context, error, stackTrace) {
-                if (defaultImage != null) {
-                  return Image.asset(
-                    defaultImage!,
-                    height: height ?? 250,
-                    fit: fit,
-                    width: width ?? double.infinity,
-                  );
-                }
-                return SvgPicture.asset(
-                  ImagesConstants.imageNotFound,
-                  height: height ?? 250,
-                  fit: fit,
-                  width: width ?? double.infinity,
-                );
+                return _buildErrorImage();
               },
             );
           } else {
-            return Center(child: CircularProgressIndicator());
+            return const Center(child: CircularProgressIndicator());
           }
         },
       );
     }
+
+    ImageProvider imageProvider;
+    if (_isWeb()) {
+      try {
+        imageProvider = NetworkImage(imageUrl);
+      } catch (e) {
+        return _buildErrorImage();
+      }
+    } else if (_isLocal()) {
+      imageProvider = AssetImage(imageUrl) as ImageProvider;
+    } else {
+      imageProvider = FileImage(File(imageUrl));
+    }
+
     return Image(
-      image: _isWeb()
-          ? NetworkImage(imageUrl)
-          : (_isLocal() ? AssetImage(imageUrl) : FileImage(File(imageUrl))),
+      image: imageProvider,
       fit: fit,
       width: width,
       height: height,
       errorBuilder: (context, error, stackTrace) {
-        if (defaultImage != null) {
-          return Image.asset(
-            defaultImage!,
-            height: height ?? 250,
-            fit: fit,
-            width: width ?? double.infinity,
-          );
-        }
-        return SvgPicture.asset(
-          ImagesConstants.imageNotFound,
-          height: height ?? 250,
-          fit: fit,
-          width: width ?? double.infinity,
-        );
+        return _buildErrorImage();
       },
       loadingBuilder: (context, child, loadingProgress) {
         if (loadingProgress == null) return child;
         return SizedBox(
-            height: height,
-            width: width,
-            child: Container(
-              color: Colors.grey[200],
-              child: const Center(
-                child: CircularProgressIndicator(),
-              ),
-            ));
+          height: height,
+          width: width,
+          child: Container(
+            color: Colors.grey[200],
+            child: const Center(
+              child: CircularProgressIndicator(),
+            ),
+          ),
+        );
       },
+    );
+  }
+
+  Widget _buildErrorImage() {
+    // return Image.asset()
+    if (defaultImage != null) {
+      return Image.asset(
+        defaultImage!,
+        height: height ?? 250,
+        fit: fit,
+        width: width ?? double.infinity,
+      );
+    }
+    return SvgPicture.asset(
+      ImagesConstants.imageNotFound,
+      height: height ?? 250,
+      fit: fit,
+      width: width ?? double.infinity,
     );
   }
 }

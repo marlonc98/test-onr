@@ -5,7 +5,7 @@ class ProductHostDto {
     return ProductEntity(
       id: json['id'],
       title: json['title'],
-      price: json['price'],
+      price: double.parse((json['price'].toString())),
       description: json['description'],
       imageUrl: json['image'],
       rankingCount: json['ranking']?['count'] ?? 0,

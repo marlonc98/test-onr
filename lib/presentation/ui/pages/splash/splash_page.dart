@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:test_onr/domain/states/localization_state.dart';
 import 'package:test_onr/domain/use_cases/default/load_use_case.dart';
 import 'package:lottie/lottie.dart';
+import 'package:test_onr/presentation/ui/pages/shop/product/list/products_list_page.dart';
 import 'package:test_onr/utils/images_constants.dart';
 import 'package:test_onr/utils/key_words_constants.dart';
 import 'package:provider/provider.dart';
@@ -39,7 +40,7 @@ class SplashPage extends StatelessWidget {
         ],
       ),
       function: GetIt.instance.get<LoadUseCase>().call,
-      nextScreen: const Placeholder(),
+      nextScreen: const ProductsListPage(),
     );
   }
 }

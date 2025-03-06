@@ -16,7 +16,7 @@ Future<Either<ExceptionEntity, SearchResultEntity<ProductEntity>>>
   required int itemsPerPage,
 }) async {
   try {
-    String relativeUrl = '/products';
+    String relativeUrl = 'products';
     String? response = await GetIt.I.get<RestApi>().get(relativeUrl);
     if (response == null) {
       return Left(

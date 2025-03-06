@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'dart:developer';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 import 'package:test_onr/domain/entities/exception_entity.dart';
 
@@ -10,9 +9,8 @@ class RestApi {
   RestApi({this.hostUrl = ''});
 
   Future<Map<String, String>> headers() async {
-    SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
     return {
-      'Authorization': 'Bearer ${sharedPreferences.getString('token')}',
+      // 'Authorization': 'Bearer ${sharedPreferences.getString('token')}',
       "Content-Type": "application/json; charset=utf-8",
     };
   }
@@ -38,7 +36,7 @@ class RestApi {
       String relativeUrl, String method, String body) async {
     try {
       http.Response response = await petition;
-      log('Response: ${response.body}');
+      // log('Response: ${response.body}');
       if (response.statusCode >= 200 && response.statusCode <= 299) {
         return response.body;
       } else {

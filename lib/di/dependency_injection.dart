@@ -31,9 +31,11 @@ import 'package:test_onr/domain/use_cases/product/search_products_use_case.dart'
 import 'package:test_onr/domain/use_cases/product/get_product_by_id_use_case.dart';
 import 'package:test_onr/domain/use_cases/user/search_users_use_case.dart';
 import 'package:test_onr/flavors/flavors.dart';
+import 'package:test_onr/presentation/providers/states/cart_state_impl.dart';
 import 'package:test_onr/presentation/providers/states/localization_state_impl.dart';
 import 'package:test_onr/domain/states/user_state.dart';
 import 'package:test_onr/domain/states/cart_state.dart';
+import 'package:test_onr/presentation/providers/states/user_state_impl.dart';
 
 enum ModeDependencyInjection { fake, dev, prod }
 
@@ -66,8 +68,8 @@ class DependencyInjection {
 
     //#region ------------- providers -------------------------//
     getIt.registerSingleton<LocalizationState>(LocalizationStateImpl());
-    // getIt.registerSingleton<UserState>(UserState());
-    // getIt.registerSingleton<CartState>(CartState());
+    getIt.registerSingleton<UserState>(UserStateImpl());
+    getIt.registerSingleton<CartState>(CartStateImpl());
     //#endregion
 
     //#region ------------- use cases -------------------------//
