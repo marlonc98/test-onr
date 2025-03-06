@@ -1,0 +1,12 @@
+{
+    "splashPageTitle": "Rappi Movies",
+    "splashPageVersion": "Versión 1.0",
+    "noInternetConnection": "No hay conexión a internet",
+
+    "notFoundWidgetNotResults": "No se han encontrado resultados",
+    "notFoundWidgetGoBack": "Go Back",
+
+    "errorPaginatorTitle": "Ups! Algo salió mal",
+    "errorPaginatorRetry": "Reintentar"
+  
+}

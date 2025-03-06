@@ -1,0 +1,57 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Rappi Movie (fake)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/flavors/main_fake.dart",
+            "args": [
+                "--flavor",
+                "fake"
+            ],
+        },
+        {
+            "name": "Rappi Movie (dev)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/flavors/main_dev.dart",
+            "args": [
+                "--flavor",
+                "dev"
+            ],
+        },
+        {
+            "name": "Rappi Movie (prod)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/flavors/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod"
+            ],
+        },
+
+        {
+            "name": "Rappi Movie (prod - release mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "lib/flavors/main_prod.dart",
+            "args": [
+                "--flavor",
+                "prod"
+            ],
+            "flutterMode": "release"
+            
+        },
+        {
+            "name": "test_rappi (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}
