@@ -1,0 +1,34 @@
+{
+    "splashPageTitle": "Onr Shops",
+    "splashPageVersion": "Versión 1.0",
+    "noInternetConnection": "No hay conexión a internet",
+
+    "notFoundWidgetNotResults": "No se han encontrado resultados",
+    "notFoundWidgetGoBack": "Go Back",
+
+    "errorPaginatorTitle": "Ups! Algo salió mal",
+    "errorPaginatorRetry": "Reintentar",
+
+    "------------------validators---------------------":"",
+    "ValidatorRequired": "This field is required",
+    "ValidatorEmail": "The email is invalid",
+    "ValidatorMatchField": "Not match with field \"{fieldName}\"",
+    "ValidatorMinlength": "The min length is {minLength}",
+    "ValidatorMaxLength": "The max length is {maxLength}",
+    "ValidatorMinArraylength": "You must select almost {minLength} options",
+    "ValidatorMinValue": "The min value is {minValue}",
+    "ValidatorMaxValue": "The max value is {maxValue}",
+    "ValidatorIsNotNumber": "The value is not a number",
+    "ValidatorIsNotDouble": "The value is not a double",
+    "ValidatorInvalid": "The value is invalid",
+    "ValidatorRequiresLowercase": "Lowercase letter required",
+    "ValidatorRequiresUppercase": "Uppercase letter required",
+    "ValidatorRequiresNumber": "Numbers are required",
+    "ValidatorCustomNoPhone": "The phone field needs dial and number, for example +1 3000000",
+    "ValidatorCustomRequiresSpecialCharacter": "The field requires at least one special character",
+    "ValidatorCustomNoName": "Please insert a valid name",
+    "ValidatorNotSpecialCharacters": "The field can't have special characters",
+    "ValidatorNotNumber": "The field can't have numbers",
+    "ValidatorMinDate": "The date is before the min date"
+  
+}

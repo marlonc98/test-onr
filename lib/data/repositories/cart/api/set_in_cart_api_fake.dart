@@ -19,7 +19,7 @@ Future<Either<ExceptionEntity, void>> setInCartApiFake({
             .toList()
         : [];
 
-    if (quantity == 0) {
+    if (quantity <= 0) {
       cart.removeWhere((item) => item.product.id == product.id);
     } else {
       final index = cart.indexWhere((item) => item.product.id == product.id);

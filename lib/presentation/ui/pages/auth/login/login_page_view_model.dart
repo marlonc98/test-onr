@@ -1,3 +1,4 @@
+import 'package:go_router/go_router.dart';
 import 'package:test_onr/domain/entities/user/user_entity.dart';
 import 'package:test_onr/domain/use_cases/auth/sign_in_use_case.dart';
 import 'package:flutter/material.dart';
@@ -33,11 +34,9 @@ class LoginPageViewModel extends ViewModel<LoginPage> {
               );
       if (response.isRight) {
         if (mounted) {
-          Navigator.pushNamedAndRemoveUntil(
-            // ignore: use_build_context_synchronously
-            context,
+          // ignore: use_build_context_synchronously
+          context.go(
             ProductsListPage.route,
-            (route) => false,
           );
         }
       } else {

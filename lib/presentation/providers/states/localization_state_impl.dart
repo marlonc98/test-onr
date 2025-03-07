@@ -9,7 +9,7 @@ class LocalizationStateImpl extends LocalizationState {
     _load();
   }
 
-  Locale _locale = const Locale('es', '');
+  Locale _locale = const Locale('en', '');
   @override
   Locale get locale => _locale;
   @override

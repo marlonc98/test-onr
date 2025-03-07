@@ -1,6 +1,7 @@
 import 'package:either_dart/either.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'package:test_onr/domain/entities/exception_entity.dart';
 import 'package:test_onr/domain/entities/user/user_entity.dart';
@@ -14,7 +15,7 @@ import 'package:test_onr/utils/key_words_constants.dart';
 import 'package:provider/provider.dart';
 
 class SplashPage extends StatefulWidget {
-  static const String route = '/splash';
+  static const String route = '/';
   const SplashPage({super.key});
 
   @override
@@ -41,11 +42,10 @@ class _SplashPageState extends State<SplashPage> {
         await GetIt.I.get<GetCurrentUserUseCase>().call();
     if (!mounted) return;
     if (response.isRight) {
-      Navigator.of(context).pushReplacementNamed(ProductsListPage.route);
+      context.replace(ProductsListPage.route);
     } else {
-      Navigator.of(context).pushReplacementNamed(LoginPage.route);
+      context.replace(LoginPage.route);
     }
-    print("loaded data: " + response.toString());
   }
 
   Future<void> _loadUseCase() async {

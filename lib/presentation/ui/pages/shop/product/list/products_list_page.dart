@@ -46,8 +46,6 @@ class _ProductsListPageState extends State<ProductsListPage> {
                 ),
               ],
             ),
-            bottomNavigationBar: CustomBottomNavigation(
-                context: context, currentRoute: ProductsListPage.route),
           );
         }));
   }

@@ -41,10 +41,6 @@ class _UsersListPageState extends State<UsersListPage> {
                 ),
               ],
             ),
-            bottomNavigationBar: CustomBottomNavigation(
-              context: context,
-              currentRoute: UsersListPage.route,
-            ),
           );
         }));
   }

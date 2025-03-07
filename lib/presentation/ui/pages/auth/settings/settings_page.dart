@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:test_onr/domain/states/user_state.dart';
 import 'package:test_onr/domain/use_cases/auth/logout_use_case.dart';
@@ -16,6 +17,10 @@ class SettingsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = Provider.of<UserState>(context).user;
     final iconColor = Theme.of(context).textTheme.bodyMedium?.color;
+
+    if (user == null) {
+      return const Scaffold(body: Center(child: CircularProgressIndicator()));
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -72,11 +77,10 @@ class SettingsPage extends StatelessWidget {
             Center(
               child: ButtonWidget(
                 onTap: () async {
-                  GetIt.I.get<LogoutUseCase>().call();
-                  Navigator.pushNamedAndRemoveUntil(
-                    context,
+                  await GetIt.I.get<LogoutUseCase>().call();
+                  // ignore: use_build_context_synchronously
+                  context.go(
                     LoginPage.route,
-                    (route) => false,
                   );
                 },
                 text: "Logout",

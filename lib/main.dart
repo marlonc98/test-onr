@@ -4,7 +4,7 @@ import 'package:test_onr/di/dependency_injection.dart';
 import 'package:test_onr/domain/states/cart_state.dart';
 import 'package:test_onr/domain/states/localization_state.dart';
 import 'package:test_onr/domain/states/user_state.dart';
-import 'package:test_onr/presentation/routes/route_generator.dart';
+import 'package:test_onr/presentation/routes/route_settings.dart';
 import 'package:test_onr/presentation/ui/theme/dark_theme.dart';
 import 'package:provider/provider.dart';
 import 'dart:async';
@@ -29,12 +29,12 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: "Onr Shops",
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       darkTheme: darkTheme,
-      onGenerateRoute: RouteGenerator.generateRoute,
+      routerConfig: routerSetting,
     );
   }
 }

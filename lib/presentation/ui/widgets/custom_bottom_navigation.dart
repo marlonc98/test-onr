@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:test_onr/presentation/ui/pages/auth/settings/settings_page.dart';
 import 'package:test_onr/presentation/ui/pages/cart/cart_page.dart';
 import 'package:test_onr/presentation/ui/pages/shop/product/list/products_list_page.dart';
@@ -35,7 +36,8 @@ class CustomBottomNavigation extends StatelessWidget {
 
   int? getIndex() {
     if (currentRoute == null) return null;
-    return routes.indexWhere((route) => route.route == currentRoute);
+    final index = routes.indexWhere((route) => route.route == currentRoute);
+    return index == -1 ? null : index;
   }
 
   @override
@@ -46,10 +48,8 @@ class CustomBottomNavigation extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       onTap: (index) {
         if (index != getIndex()) {
-          Navigator.pushNamedAndRemoveUntil(
-            context,
+          context.go(
             routes[index].route,
-            (route) => false,
           );
         }
       },

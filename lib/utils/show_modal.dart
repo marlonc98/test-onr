@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:test_onr/domain/states/localization_state.dart';
 import 'package:test_onr/utils/key_words_constants.dart';
@@ -36,7 +37,7 @@ class ShowModal {
                   localization.translate(KeyWordsConstants.accept),
                 ),
                 onPressed: () {
-                  Navigator.of(context).pop();
+                  context.pop();
                 },
               ),
             ],

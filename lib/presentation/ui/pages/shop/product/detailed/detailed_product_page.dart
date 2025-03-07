@@ -6,7 +6,8 @@ import 'package:test_onr/presentation/ui/widgets/image_network_with_load_widget.
 import 'package:test_onr/presentation/ui/widgets/not_found_widget.dart';
 
 class DetailedProductPage extends StatefulWidget {
-  static const String route = '/products/detailed';
+  static const String route = '/product-detailed/:id';
+  static const String fullRoute = '/products/product-detailed';
 
   final int id;
   const DetailedProductPage({super.key, required this.id});

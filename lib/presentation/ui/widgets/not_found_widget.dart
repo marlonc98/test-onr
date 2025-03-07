@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
 import 'package:test_onr/domain/states/localization_state.dart';
 import 'package:test_onr/utils/images_constants.dart';
@@ -20,7 +21,7 @@ class NotFoundWidget extends StatelessWidget {
                 .translate(KeyWordsConstants.notFoundWidgetNotResults)),
             SizedBox(height: MediaQuery.of(context).size.height * 0.2),
             TextButton(
-                onPressed: () => Navigator.of(context).pop(),
+                onPressed: () => context.pop(),
                 child: Text(localization
                     .translate(KeyWordsConstants.notFoundWidgetGoBack))),
             SizedBox(height: MediaQuery.of(context).size.height * 0.4 - 300),

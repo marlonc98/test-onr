@@ -50,7 +50,7 @@ class DetailedProductPageViewModel extends ViewModel<DetailedProductPage> {
     if (product == null) return;
     final cartItem = getIt.get<CartState>().getItem(product!.id);
     if (cartItem == null) return;
-    _handleModifyQuantity(-1);
+    _handleModifyQuantity(cartItem.quantity - 1);
   }
 
   void handleAddOne() {
