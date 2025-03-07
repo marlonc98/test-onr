@@ -53,23 +53,11 @@ El proyecto utiliza las siguientes librerías externas para facilitar el desarro
 6. **[shared_preferences: ^2.3.3](https://pub.dev/packages/shared_preferences)**  
    Se utiliza para almacenar la configuración de idioma seleccionada por el usuario. Esto es útil para admitir múltiples idiomas, permitiendo recordar la preferencia del usuario entre sesiones y facilitar el cambio o la inclusión de otros idiomas en el futuro.
 
-7. **[provider: ^6.0.3](https://pub.dev/packages/provider)**  
-   Se utiliza para la gestión del estado en la aplicación. Proporciona una forma eficiente y escalable de compartir y actualizar el estado entre los widgets.
-
-8. **[freezed_annotation: ^2.0.0](https://pub.dev/packages/freezed_annotation)**  
+7. **[freezed_annotation: ^2.0.0](https://pub.dev/packages/freezed_annotation)**  
    Se utiliza para generar clases inmutables y con soporte para JSON serialization/deserialization. Facilita la creación de modelos de datos robustos y seguros.
 
-9. **[json_serializable: ^6.0.1](https://pub.dev/packages/json_serializable)**  
+8. **[json_serializable: ^6.0.1](https://pub.dev/packages/json_serializable)**  
    Se utiliza junto con `freezed_annotation` para generar automáticamente el código necesario para la serialización y deserialización de JSON.
-
-10. **[carousel_slider: ^4.0.0](https://pub.dev/packages/carousel_slider)**  
-    Se utiliza para crear carruseles de imágenes y otros widgets. Proporciona una forma fácil de implementar carruseles con soporte para puntos indicadores y otras características.
-
-11. **[get_it: ^7.2.0](https://pub.dev/packages/get_it)**  
-    Se utiliza para la inyección de dependencias en la aplicación. Facilita la gestión de dependencias y la creación de instancias de clases.
-
-12. **[either_dart: ^0.1.0](https://pub.dev/packages/either_dart)**  
-    Se utiliza para manejar errores y resultados en la aplicación. Proporciona una forma funcional de representar valores que pueden ser de dos tipos diferentes (por ejemplo, éxito o error).
 
 
 ---
@@ -84,14 +72,6 @@ Si deseas probar la aplicación en Android, puedes descargar el archivo APK desd
 ## Consideraciones
 
 Este proyecto está estructurado para ser fácilmente escalable y adaptable a las necesidades futuras. La separación de responsabilidades y la inyección de dependencias garantizan un código limpio y mantenible.
-
-### Uso de Riverpod
-
-Aunque no se utilizó en este proyecto debido al uso de `either_dart`, `riverpod` puede ser una excelente opción para la gestión del estado. Si se desea usar, puede ser implementado como una actualización entre el caso de uso y la interfaz de usuario.
-
-### Fluro
-
-Si se desea cambiar el sistema de navegación, `fluro` puede ser una opción. Solo se debe cambiar el sistema de enrutamiento anterior y actualizar las dependencias.
 
 ### Unit Testing
 

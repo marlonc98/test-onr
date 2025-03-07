@@ -26,14 +26,15 @@ class _DetailedProductPageState extends State<DetailedProductPage> {
       child: Consumer<DetailedProductPageViewModel>(
         builder: (context, viewModel, child) {
           if (viewModel.loading) {
-            return const Scaffold(
-              body: Center(
+            return Scaffold(
+              appBar: AppBar(),
+              body: const Center(
                 child: CircularProgressIndicator(),
               ),
             );
           }
           if (viewModel.product == null) {
-            return const Scaffold(body: NotFoundWidget());
+            return Scaffold(appBar: AppBar(), body: const NotFoundWidget());
           }
           return Scaffold(
             body: Column(
@@ -122,7 +123,7 @@ class _DetailedProductPageState extends State<DetailedProductPage> {
                     padding: const EdgeInsets.only(
                         left: 16.0, right: 16, bottom: 24, top: 16),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Theme.of(context).cardColor,
                       borderRadius: BorderRadius.circular(16),
                       boxShadow: const [
                         BoxShadow(
