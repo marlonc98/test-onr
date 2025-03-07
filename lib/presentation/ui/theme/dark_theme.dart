@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const Color colorMain = Colors.red;
+const Color colorMain = Color.fromRGBO(70, 152, 187, 1);
 
 ThemeData lightTheme = ThemeData.light().copyWith(
   primaryColor: colorMain,

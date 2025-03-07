@@ -59,7 +59,8 @@ El proyecto utiliza las siguientes librerías externas para facilitar el desarro
 8. **[json_serializable: ^6.0.1](https://pub.dev/packages/json_serializable)**  
    Se utiliza junto con `freezed_annotation` para generar automáticamente el código necesario para la serialización y deserialización de JSON.
 
-
+9. **[go_router: ^14.8.1](https://pub.dev/packages/go_router)**  
+   Se utiliza para la navegación declarativa en Flutter. Facilita la gestión de rutas y la navegación entre pantallas, permitiendo definir rutas de manera clara y concisa, y manejar la navegación de manera eficiente.
 ---
 
 ## Descargar la Aplicación

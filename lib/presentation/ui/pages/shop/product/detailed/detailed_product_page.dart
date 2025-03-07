@@ -139,10 +139,10 @@ class _DetailedProductPageState extends State<DetailedProductPage> {
                       children: [
                         Text(
                           '\$${viewModel.product?.price ?? 0.0}',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
-                            color: Colors.green,
+                            color: Theme.of(context).primaryColor,
                           ),
                         ),
                         cartItem != null && cartItem.quantity > 0

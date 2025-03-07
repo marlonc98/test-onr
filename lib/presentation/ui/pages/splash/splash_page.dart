@@ -67,7 +67,7 @@ class _SplashPageState extends State<SplashPage> {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               localizationState.translate(KeyWordsConstants.splashPageTitle),

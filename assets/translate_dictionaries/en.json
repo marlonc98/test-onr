@@ -1,13 +1,27 @@
 {
-    "splashPageTitle": "Onr Shops",
+    "splashPageTitle": "ONR Shops",
     "splashPageVersion": "Versión 1.0",
-    "noInternetConnection": "No hay conexión a internet",
+    "noInternetConnection": "No internet connection",
 
-    "notFoundWidgetNotResults": "No se han encontrado resultados",
+    "notFoundWidgetNotResults": "No results found",
     "notFoundWidgetGoBack": "Go Back",
 
-    "errorPaginatorTitle": "Ups! Algo salió mal",
-    "errorPaginatorRetry": "Reintentar",
+    "errorPaginatorTitle": "Ups! Something went wrong",
+    "errorPaginatorRetry": "Retry",
+
+    "loginPageTitle": "Welcome to Onr Shops",
+    "loginPageEmail": "Email",
+    "loginPagePassword": "Password",
+    "loginPageLogin": "Login",
+
+    "serverErrorProductNotFound": "Product not found",
+    "serverErrorUserNotFound": "User not found",
+    "errorLoadingUsers": "Error loading users",
+
+    "optional": "Optional",
+    "accept": "Accept",
+
+    "datesFormatWithoutDate": "Without date",
 
     "------------------validators---------------------":"",
     "ValidatorRequired": "This field is required",
