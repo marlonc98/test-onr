@@ -1,6 +1,6 @@
-# Prueba Técnica - Ingreso a Rappi
+# Prueba Técnica - Ingreso a onr
 
-Este proyecto es una prueba técnica para el proceso de ingreso a la empresa **Rappi**. A continuación, se describen las características y la arquitectura de la aplicación.
+Este proyecto es una prueba técnica para el proceso de ingreso a la empresa **onr**. A continuación, se describen las características y la arquitectura de la aplicación.
 
 ---
 

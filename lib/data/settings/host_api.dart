@@ -6,7 +6,7 @@ import 'package:test_onr/data/settings/rest_api.dart';
 class HostApi extends RestApi {
   //load depending flavors
   HostApi({
-    super.hostUrl = "https://fakestoreapi.com/",
+    super.hostUrl = "https://fakestoreapi.com",
   });
 
   @override

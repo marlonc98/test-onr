@@ -5,16 +5,15 @@ import 'package:test_onr/domain/states/localization_state.dart';
 import 'package:test_onr/utils/key_words_constants.dart';
 
 class ErrorPaginatorWidget extends StatelessWidget {
-  final PagingController pagingController;
-  final Function()? onRetry;
+  final PagingController pagingcontroller;
 
-  const ErrorPaginatorWidget(
-      {super.key, required this.pagingController, this.onRetry});
+  const ErrorPaginatorWidget({super.key, required this.pagingcontroller});
 
   @override
   Widget build(BuildContext context) {
-    final LocalizationState localization =
-        Provider.of<LocalizationState>(context);
+    final LocalizationState localization = Provider.of<LocalizationState>(
+      context,
+    );
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,19 +25,17 @@ class ErrorPaginatorWidget extends StatelessWidget {
           ),
           const SizedBox(height: 10),
           Text(
-            pagingController.error.toString(),
+            pagingcontroller.error.toString(),
             style: const TextStyle(fontSize: 16),
           ),
           const SizedBox(height: 20),
           ElevatedButton.icon(
-            onPressed: () {
-              pagingController.refresh();
-              onRetry?.call();
-            },
+            onPressed: pagingcontroller.refresh,
             icon: const Icon(Icons.refresh),
             label: Text(
-                localization.translate(KeyWordsConstants.errorPaginatorRetry)),
-          )
+              localization.translate(KeyWordsConstants.errorPaginatorRetry),
+            ),
+          ),
         ],
       ),
     );

@@ -15,13 +15,15 @@ class CartStateImpl extends CartState {
   List<CartItemEntity> get items => _items;
 
   @override
-  void addItem(ProductEntity product) {
-    final index = _items.indexWhere((item) => item.product.id == product.id);
-    if (index != -1) {
-      _items[index] =
-          _items[index].copyWith(quantity: _items[index].quantity + 1);
+  void setItem(CartItemEntity item) {
+    final index =
+        _items.indexWhere((element) => element.product.id == item.product.id);
+    if (item.quantity == 0) {
+      _items.removeAt(index);
+    } else if (index != -1) {
+      _items[index] = item;
     } else {
-      _items.add(CartItemEntity(product: product, quantity: 1));
+      _items.add(item);
     }
     notifyListeners();
   }
@@ -44,5 +46,10 @@ class CartStateImpl extends CartState {
   void clearCart() {
     _items.clear();
     notifyListeners();
+  }
+
+  @override
+  CartItemEntity? getItem(int id) {
+    return _items.where((item) => item.product.id == id).firstOrNull;
   }
 }

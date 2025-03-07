@@ -11,7 +11,7 @@ import 'package:test_onr/utils/key_words_constants.dart';
 Future<Either<ExceptionEntity, ProductEntity>> getProductByIdApiImpl(
     int id) async {
   try {
-    String relativeUrl = '/product/$id';
+    String relativeUrl = '/products/$id';
     String? response = await GetIt.I.get<RestApi>().get(relativeUrl);
     if (response == null) {
       return Left(

@@ -69,8 +69,8 @@ class SearcherAppBarState extends State<SearcherAppBar> {
                     controller: _textController,
                     onChanged: _onKeyDownSearch,
                     onSubmitted: widget.onSearch,
-                    style: const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: Theme.of(context).primaryColor,
                     ),
                   )),
                   IconButton(

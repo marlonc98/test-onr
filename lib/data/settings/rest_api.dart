@@ -36,7 +36,6 @@ class RestApi {
       String relativeUrl, String method, String body) async {
     try {
       http.Response response = await petition;
-      // log('Response: ${response.body}');
       if (response.statusCode >= 200 && response.statusCode <= 299) {
         return response.body;
       } else {

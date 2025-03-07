@@ -8,8 +8,8 @@ class ProductHostDto {
       price: double.parse((json['price'].toString())),
       description: json['description'],
       imageUrl: json['image'],
-      rankingCount: json['ranking']?['count'] ?? 0,
-      rating: json['ranking']?['rate'] ?? 0.0,
+      rankingCount: json['rating']?['count'] ?? 0,
+      rating: double.parse(json['rating']?['rate'].toString() ?? "0"),
       category: json['category'],
     );
   }

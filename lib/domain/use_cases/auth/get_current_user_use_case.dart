@@ -16,6 +16,7 @@ class GetCurrentUserUseCase {
   Future<Either<ExceptionEntity, UserEntity>> call() async {
     Either<ExceptionEntity, UserEntity> response =
         await authRepository.getCurrentUser();
+    print("GetCurrentUserUseCase response: $response");
     if (response.isRight) {
       userState.user = response.right;
     } else {

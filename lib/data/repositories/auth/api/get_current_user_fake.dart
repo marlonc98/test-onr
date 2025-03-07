@@ -9,6 +9,7 @@ Future<Either<ExceptionEntity, UserEntity>> getCurrentUserFake(
   try {
     final prefs = await SharedPreferences.getInstance();
     final userJson = prefs.getString(userSharedPrefKey);
+    print('userJson: $userJson');
     if (userJson != null) {
       final user = UserEntity.fromJson(jsonDecode(userJson));
       return Right(user);

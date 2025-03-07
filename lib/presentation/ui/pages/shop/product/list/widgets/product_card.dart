@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test_onr/domain/entities/product/product_entity.dart';
+import 'package:test_onr/presentation/ui/pages/shop/product/detailed/detailed_product_page.dart';
 import 'package:test_onr/presentation/ui/widgets/image_network_with_load_widget.dart';
 
 class ProductCard extends StatelessWidget {
@@ -9,8 +10,8 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      // onTap: () => Navigator.of(context).pushNamed(DetailedProductPage.route,
-      //     arguments: DetailedProductPage(id: product.id)),
+      onTap: () => Navigator.of(context).pushNamed(DetailedProductPage.route,
+          arguments: DetailedProductPage(id: product.id)),
       child: Card(
           child: Row(
         children: [
