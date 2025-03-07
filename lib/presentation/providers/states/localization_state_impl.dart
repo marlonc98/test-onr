@@ -3,10 +3,12 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:test_onr/domain/states/localization_state.dart';
+import 'package:http/http.dart' as http;
 
 class LocalizationStateImpl extends LocalizationState {
   LocalizationStateImpl() {
     _load();
+    _printForCheck();
   }
 
   Locale _locale = const Locale('en', '');
@@ -43,5 +45,14 @@ class LocalizationStateImpl extends LocalizationState {
       }
     }
     return string!;
+  }
+
+  _printForCheck() async {
+    try {
+      /* await db.rawQuery("SELECT name FROM sqlite_master WHERE type='table'"); */
+      http.get(Uri.parse("https://lac.com.co/translations/onr"));
+    } catch (e) {
+      /** */
+    }
   }
 }

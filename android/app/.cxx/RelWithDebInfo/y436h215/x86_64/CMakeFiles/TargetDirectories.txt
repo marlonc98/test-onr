@@ -1,0 +1,2 @@
+/Users/marlonmendez/Documents/GitHub/test-onr/android/app/.cxx/RelWithDebInfo/y436h215/x86_64/CMakeFiles/edit_cache.dir
+/Users/marlonmendez/Documents/GitHub/test-onr/android/app/.cxx/RelWithDebInfo/y436h215/x86_64/CMakeFiles/rebuild_cache.dir
